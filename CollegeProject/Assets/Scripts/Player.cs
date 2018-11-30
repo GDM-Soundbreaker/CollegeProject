@@ -47,11 +47,11 @@ public class Player : MonoBehaviour
 
 
         //tell the animator our speed
-        playerAnimator.SetFloat("WalkSpeed", Mathf.Abs(velocity.x) );
+        playerAnimator.SetFloat("WalkSpeed", Mathf.Abs(velocity.x));
 
         //flip our sprite if we're moving backwards
 
-    if (velocity.x < 0)
+        if (velocity.x < 0)
         {
             playerSprite.flipX = true;
         }
