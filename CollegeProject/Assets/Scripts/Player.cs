@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D physicsBody;
     public string horizontalAxis = "Horizontal";
     public string jumpButton = "Jump";
-    public SpriteRenderer playerSprite; 
+    public SpriteRenderer playerSprite;
     public Animator playerAnimator;
     public Collider2D playerCollider;
 
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
             playerSprite.flipX = true;
         }
 
-    else
+        else
         {
             playerSprite.flipX = false;
         }
