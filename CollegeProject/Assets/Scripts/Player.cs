@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
         {
             playerSprite.flipX = false;
         }
+
         //Jumping
 
         //detect if ground is being touched
