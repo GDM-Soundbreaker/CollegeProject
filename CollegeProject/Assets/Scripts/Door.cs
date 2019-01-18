@@ -2,7 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spikes : MonoBehaviour {
+// Extra using statement to allow us to use the scene management functions
+using UnityEngine.SceneManagement;
+
+public class Door : MonoBehaviour {
+
+    // Variable to let us save the score
+    //      Public so we can drag and drop
+    public Score scoreObject;
+
+    // Designer variables
+    public string sceneToLoad;
 
     // Unity calls this function automatically
     // when our spikes touch any other object
@@ -20,10 +30,14 @@ public class Spikes : MonoBehaviour {
         {
             // We DID hit the player!
 
-            // KILL THEM
-            playerScript.Kill();
+            // Save the score using our score object reference
+            scoreObject.SaveScore();
+
+            // Load the next level
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
+
 
 
 }
