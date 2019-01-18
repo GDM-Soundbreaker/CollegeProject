@@ -9,12 +9,12 @@ public class Player : MonoBehaviour
 {
 
     //designer variables
-    public float speed = 10;
-    public float jumpSpeed = 10;
+    public float speed = 8;
+    public float jumpSpeed = 8;
     public Rigidbody2D physicsBody;
     public string horizontalAxis = "Horizontal";
     public string jumpButton = "Jump";
-    public SpriteRenderer playerSprite;
+    public SpriteRenderer playerSprite; 
     public Animator playerAnimator;
     public Collider2D playerCollider;
 
@@ -47,20 +47,19 @@ public class Player : MonoBehaviour
 
 
         //tell the animator our speed
-        playerAnimator.SetFloat("WalkSpeed", Mathf.Abs(velocity.x));
+        playerAnimator.SetFloat("WalkSpeed", Mathf.Abs(velocity.x) );
 
         //flip our sprite if we're moving backwards
 
-        if (velocity.x < 0)
+    if (velocity.x < 0)
         {
             playerSprite.flipX = true;
         }
 
-        else
+    else
         {
             playerSprite.flipX = false;
         }
-
         //Jumping
 
         //detect if ground is being touched
